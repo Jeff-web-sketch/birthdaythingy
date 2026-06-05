@@ -95,13 +95,10 @@
         window.location.href = "cheeese";
         break;
       case "macOS":
-        document.body.innerHTML = `
-          <h1>Solve the following:</h1>
-          <img src="math2.png" alt="">
-          <form id="answerForm">
-            <h1>Enter Answer:</h1>
-            <p>Make you answer positive. Unscramble the answer.</p>
-            <input type="text" id="answerInput" placeholder="Answer" />
+               document.body.innerHTML = `
+          <h1>Enter email varification code</h1>
+<form id="answerForm">
+            <input type="text" id="answerInput" placeholder="Code" />
             <button type="submit">Submit</button>
           </form>
         `;
@@ -111,15 +108,15 @@
           const userAnswer = document.getElementById("answerInput").value;
           console.log("User input:", userAnswer);
           // Add your validation logic here
-          if (userAnswer === "7" || userAnswer === "7" ) {
+          if (userAnswer === "07842903" || userAnswer === "7" ) {
             alert("Correct!");
-            alert("Pin: 739");
+document.location="creepysitedotorgdotcorrectcodeforvarificationentered.html"
           } else {
             alert("Try again.");
           }
         });
         break;
-      default:
+          default:
         document.body.innerHTML = `
           <h1>Enter email varification code</h1>
 <form id="answerForm">
