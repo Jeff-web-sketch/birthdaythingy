@@ -1,0 +1,148 @@
+<!--<script>
+  function getOS() {
+    const userAgent = navigator.userAgent;
+    
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return "iOS";
+    if (/android/i.test(userAgent)) return "Android";
+    if (/Win/i.test(userAgent)) return "Windows";
+    if (/Mac/i.test(userAgent)) return "macOS";
+    
+    return "unknown";
+  }
+
+  function redirectBasedOnOS() {
+    const os = getOS();
+    switch(os) {
+      case "iOS":
+        window.location.href = "IosPage.html";
+        break;
+      case "Android":
+        window.location.href = "AndroidPage.html";
+        break;
+      case "Windows":
+        window.location.href = "cheeese";
+        break;
+      case "macOS":
+        //window.location.href = "cheese2";
+        document.body.innerHTML = '<h1>Solve the following:</h1><img src="math1.png" alt=""><h1>Enter Answer:</h1><br><input type="text" placeholder="Answer" />';
+        break;
+      default:
+        // Optionally handle unknown OS
+    }
+  }
+
+  window.onload = redirectBasedOnOS;
+</script>   -->
+<meta name="viewport" content="width=device-width, initial-scale=1">   
+<script>
+  function getOS() {
+    const userAgent = navigator.userAgent;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return "iOS";
+    if (/android/i.test(userAgent)) return "Android";
+    if (/Win/i.test(userAgent)) return "Windows";
+    if (/Mac/i.test(userAgent)) return "macOS";
+    return "unknown";
+  }
+
+  function redirectBasedOnOS() {
+    const os = getOS();
+    switch(os) {
+      case "iOS":
+        document.body.innerHTML = `
+          <h1>Enter email varification code</h1>
+        `;
+        
+        document.getElementById("answerForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+          const userAnswer = document.getElementById("answerInput").value;
+          console.log("User input:", userAnswer);
+          // Add your validation logic here
+          if (userAnswer === "7" || userAnswer === "7" ) {
+            alert("Correct!");
+            alert("Pin: 0149");
+          } else {
+            alert("Try again.");
+          }
+        });
+        break;
+      case "Android":
+        document.body.innerHTML = `
+          <h1>Solve the following:</h1>
+          <img src="math1.png" alt="">
+          <form id="answerForm">
+            <h1>Enter Answer:</h1>
+            <p>Make you answer positive. Unscramble the answer.</p>
+            <input type="text" id="answerInput" placeholder="Answer" />
+            <button type="submit">Submit</button>
+          </form>
+        `;
+        
+        document.getElementById("answerForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+          const userAnswer = document.getElementById("answerInput").value;
+          console.log("User input:", userAnswer);
+          // Add your validation logic here
+          if (userAnswer === "i8π" || userAnswer === "I8π" ) {
+            alert("Correct!");
+            alert("Pin: 1039");
+          } else {
+            alert("Try again.");
+          }
+        });
+        
+        break;
+      case "Windows":
+        window.location.href = "cheeese";
+        break;
+      case "macOS":
+        document.body.innerHTML = `
+          <h1>Solve the following:</h1>
+          <img src="math2.png" alt="">
+          <form id="answerForm">
+            <h1>Enter Answer:</h1>
+            <p>Make you answer positive. Unscramble the answer.</p>
+            <input type="text" id="answerInput" placeholder="Answer" />
+            <button type="submit">Submit</button>
+          </form>
+        `;
+        
+        document.getElementById("answerForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+          const userAnswer = document.getElementById("answerInput").value;
+          console.log("User input:", userAnswer);
+          // Add your validation logic here
+          if (userAnswer === "7" || userAnswer === "7" ) {
+            alert("Correct!");
+            alert("Pin: 739");
+          } else {
+            alert("Try again.");
+          }
+        });
+        break;
+      default:
+        document.body.innerHTML = `
+          <h1>Enter email varification code</h1>
+<form id="answerForm">
+            <input type="text" id="answerInput" placeholder="Code" />
+            <button type="submit">Submit</button>
+          </form>
+        `;
+        
+        document.getElementById("answerForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+          const userAnswer = document.getElementById("answerInput").value;
+          console.log("User input:", userAnswer);
+          // Add your validation logic here
+          if (userAnswer === "07842903" || userAnswer === "7" ) {
+            alert("Correct!");
+document.location="creepysitedotorgdotcorrectcodeforvarificationentered.html"
+          } else {
+            alert("Try again.");
+          }
+        });
+        break;
+    }
+  }
+
+  window.onload = redirectBasedOnOS;
+</script>   
