@@ -48,8 +48,12 @@
     const os = getOS();
     switch(os) {
       case "iOS":
-        document.body.innerHTML = `
+         document.body.innerHTML = `
           <h1>Enter email varification code</h1>
+<form id="answerForm">
+            <input type="text" id="answerInput" placeholder="Code" />
+            <button type="submit">Submit</button>
+          </form>
         `;
         
         document.getElementById("answerForm").addEventListener("submit", function(e) {
@@ -57,15 +61,14 @@
           const userAnswer = document.getElementById("answerInput").value;
           console.log("User input:", userAnswer);
           // Add your validation logic here
-          if (userAnswer === "7" || userAnswer === "7" ) {
+          if (userAnswer === "07842903" || userAnswer === "7" ) {
             alert("Correct!");
-            alert("Pin: 0149");
+document.location="creepysitedotorgdotcorrectcodeforvarificationentered.html"
           } else {
             alert("Try again.");
           }
         });
-        break;
-      case "Android":
+        break;      case "Android":
         document.body.innerHTML = `
           <h1>Solve the following:</h1>
           <img src="math1.png" alt="">
